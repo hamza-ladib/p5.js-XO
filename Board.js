@@ -25,13 +25,15 @@ function Board(x,y,w,h){
     }
     this.move=()=>{
         //console.log(this.x+this.w/2,this.x+this.h/2);
-        stroke("#B2FF59");
+       
         strokeWeight(4);
         if(this.player==2){
+             stroke("#B2FF59");
         circle(this.x+this.w/2,this.y+this.h/2,this.w*0.5);
         this.holding=2;
         }
         else if(this.player==1){
+            stroke('#E64A19');
         line(this.x+this.o,this.y+this.o,this.x+this.w-this.o,this.y+this.h-this.o);
         line(this.x+this.w-this.o,this.y+this.o,this.x+this.o,this.y+this.h-this.o)
          this.holding=1;
